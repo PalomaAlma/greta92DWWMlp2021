@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>Da Vinci Coders</title>
+	<link rel="icon" href="pics/logo.svg" type="image/svg" />
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<main id="cont">	
+		<header id="bann">
+			<h1 id="nom">Da Vinci Coders</h1>
+			<p id="accroche">Le code, c'est notre domaine !</p>
+		</header>
+		<div id="cookie">
+			<p>Attention, ce site est susceptible de récolter des informations vous concernant en utilisant des cookies : </p>
+			<span class="btn" onclick="this.parentElement.style.display='none'">Accepter</span><a href="http://www.google.fr/" class="btn">Refuser</a>
+		</div>
+		<nav id="menu">
+			<ul id="redir">
+				<li><a href="summary.html">Présentation</a></li>
+				<li><a href="form.html">Recrutement</a></li>
+				<li><a href="#">Pas d'Idée</a></li>
+				<li><a href="#">Non Plus</a></li>
+				<li><a href="#">Toujours Pas</a></li>
+			</ul>
+		</nav>
+		<section id="equipe">
+			<!--team-->
+			<h2>L'Equipe</h2>
+			<div id="team">
+				<figure>
+					<img src="pics/collegue1.jpg" alt="R" class="rounded">
+					<figcaption>R</figcaption>
+				</figure>
+				<figure>
+					<img src="pics/collegue2.jpg" alt="W" class="rounded">
+					<figcaption>W</figcaption>
+				</figure>
+				<figure>
+					<img src="pics/collegue3.jpg" alt="L" class="rounded">
+					<figcaption>L</figcaption>
+				</figure>
+				<figure>
+					<img src="pics/collegue4(1).jpg" alt="D" class="rounded">
+					<figcaption>D</figcaption>
+				</figure>
+				<figure>
+					<img src="pics/collegue5(1).jpg" alt="P" class="rounded">
+					<figcaption>P</figcaption>
+				</figure>
+				
+			</div>
+		</section>
+		<section id="allprojet">
+			<!--projet-->
+			<h2>Les projets</h2>
+			<div id="projet">
+				<article>
+					<figure>
+						<img src="pics/sitevitrine.png" alt="Site Vitrine">
+					</figure>
+					<div>
+						<h3>Site Vitrine</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, dolore soluta assumenda vero quis quasi corporis consectetur eos amet saepe sapiente impedit. Officiis, iusto fugit possimus dignissimos eaque voluptates recusandae?</p>
+					</div>
+					<a href="#">Suite...</a>
+				</article>
+				<article>
+					<figure>
+						<img src="pics/cms.jpg" alt="Site CMS">
+					</figure>
+					<div class="nthprojet">
+						<h3>Site CMS</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe temporibus nulla minima dolor facilis vitae ducimus rerum. Ab tempora quasi autem odio sunt nemo totam numquam officiis laboriosam, voluptas iste.</p>
+					</div>
+					<a href="#">Suite...</a>
+				</article>
+				<article>
+					<figure>
+						<img src="pics/webapp.jpg" alt="Web App">
+					</figure>
+					<div class="nthprojet">
+						<h3>WebApps</h3>
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error provident sunt omnis veritatis blanditiis amet voluptatum reprehenderit excepturi numquam, voluptate consectetur ipsum? Praesentium velit voluptate quae possimus eum cumque eius!</p>
+					</div>
+					<a href="#">Suite...</a>
+				</article>
+			</div>
+		</section>
+		<section id="temoin">
+			<h2>Ils ont donné leur avis !</h2>
+			<!--témoignages (audio)-->
+			<div id="alltemoin">
+				<div id="prem">
+					<article class="temoignage">
+						<h3>Jean Goujon</h3>
+						<time datetime="2020-09-14T16:20:00">Jeudi 14 Septembre</time>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab modi possimus nam pariatur sint quae perspiciatis dolore, cum consectetur odit tempora placeat iure, aspernatur veniam, error asperiores? Impedit, commodi consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum voluptatum, inventore eligendi unde pariatur, nihil laudantium accusantium quia nam sapiente incidunt tempora eos sint cum explicabo facilis placeat cumque ut?</p>
+					</article>
+				</div>
+				<div id="deux">
+					<article class="temoignage">
+						<h3>Kermit Frog</h3>
+						<time datetime="2020-03-17T12:00:00">Mardi 03 Février</time>
+						<video controls>
+							<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+						</video>
+					</article>
+				</div>
+				<div id="trois">
+					<article class="temoignage">
+						<h3>Brutus Marcus</h3>
+						<time datetime="2020-05-19T12:00:00">Mercredi 19 Mai</time>
+						<audio controls>
+							<source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="video/webm">
+						</audio>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section>
+			<!--map-->
+			<iframe src=""></iframe>
+		</section>
+		<section id="formulaire">
+			<!--formulaire-->
+			<h2>NewsLetter</h2>
+			<form action="">
+				<div class="inp">
+					<label for="fname">Prénom : </label>
+					<input type="text" id="fname">
+				</div>
+				<div class="inp">
+					<label for="lname">Nom : </label>
+					<input type="text" id="lname">
+				</div>
+				<div class="inp">
+					<label for="mail">E-mail : </label>
+					<input type="email" id="mail" placeholder="________@___.com">
+				</div>
+				<div class="inps">
+					<input type="submit" class="inpsub">
+				</div>
+			</form>
+		</section>
+		<footer id="footer">
+			<!--colonnes de texte-->
+			<ul id="pied">
+					<li><span class="titre">LEGAL</span>
+					<ul id="legal">
+						<li>Mentions Légales</li>
+						<li>RGPD</li>
+						<li>cookies</li>
+					</ul></li>
+					<li><span class="titre">Nos Ambitions</span>
+					<ul id="ambition">
+						<li>Marché Européen</li>
+						<li>Asie</li>
+						<li>Afrique du Nord</li>
+					</ul></li>
+					<li><span class="titre">Historique</span>
+					<ul id="historique">
+						<li>DVC en quelques dates</li>
+						<li>2010-2020</li>
+						<li>Perspectives</li>
+					</ul></li>
+			</ul>
+		</footer>
+	</main>
+</body>
+</html>

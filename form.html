@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Formulaire de Candidature</title>
+</head>
+<body>
+    <main id="cont">
+        <header id="bann">
+            <h1 id="nom">Formulaire de Candidature</h1>
+        </header>
+        <form action="save.php" method="POST" id="formulaire" enctype="multipart/form-data">
+            <fieldset>
+                <!--Identité-->
+                <legend>Identité</legend>
+                <div class="inp">
+                    <label for="fname">Prénom</label>
+                    <input type="text" name="fname" id="fname" placeholder="Prénom Usuel" pattern="[a-zA-Zéèêëàâäù\- ]{2,30}" required autofocus>
+                </div>
+                <div class="inp">
+                    <label for="lname">Nom</label>
+                    <input type="text" name="lname" id="lname" placeholder="Nom de Famille" pattern="[a-zA-Zéèêëàâäù\- ]{2,30}" required>
+                </div>
+                <div class="inp">
+                    <label for="dob">Date de Naissance</label>
+                    <input type="date" name="dob" id="dob" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <!--Contact-->
+                <legend>Contact</legend>
+                <div class="inp">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="+33_ __ __ __ __">
+                </div>
+                <div class="inp">
+                    <label for="mail">E-mail</label>
+                    <input type="email" name="mail" id="mail" placeholder="_____@_.com">
+                </div>
+                <div class="inp">
+                    <label for="site">Site Web</label>
+                    <input type="url" name="site" id="site" placeholder="http://___.com">
+                </div>
+                <div class="inp">
+                    <label for="address">Adresse</label>
+                    <input type="text" name="address" id="address" placeholder="N° Rue, Code Postal, Ville, Pays">
+                </div>
+                <div class="inp">
+                    <label for="region">Région</label>
+                    <select name="region" id="region">
+                        <optgroup label="ouest">
+                            <option value="bz">Bretagne</option>
+                            <option value="nm">Normandie</option>
+                        </optgroup>
+                        <optgroup label="nord">
+                            <option value="pc">Pas-de-Calais</option>
+                            <option value="pi">Picardie</option>
+                        </optgroup>
+                        <optgroup label="est">
+                            <option value="al">Alsace</option>
+                            <option value="lo">Lorraine</option>
+                        </optgroup>
+                        <optgroup label="sud">
+                            <option value="ca">PACA</option>
+                            <option value="pb">Pays-Basque</option>
+                        </optgroup>
+                        <optgroup label="centre">
+                            <option value="idf">Île-de-France</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Genre</legend>
+                <div class="inpradio">
+                    <input type="radio" name="gender" id="genFem" value="Féminin" checked>
+                    <label for="genFem">Féminin</label>
+                </div>
+                <div class="inpradio">
+                    <input type="radio" name="gender" id="genMal" value="Masculin">
+                    <label for="genMal">Masculin</label>
+                </div>
+                <div class="inpradio">
+                    <input type="radio" name="gender" id="neutral" value="Neutre">
+                    <label for="neutral">Neutre</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Compétences</legend>
+                <div class="inp">
+                    <label for="exp">Année d'Expérience</label>
+                    <input type="number" name="esp" id="exp" min="1" max="35" step="1">
+                </div>
+                <div class="lang">
+                    <label for="lang">Langage Principal</label>
+                    <input type="text" name="lang" id="lang" list="langList">
+                    <datalist id="langList">
+                        <option value="Python">
+                        <option value="Java">
+                        <option value="PERL">
+                        <option value="BASIC">
+                        <option value="COBOL">
+                        <option value="C++">
+                        <option value="C">
+                        <option value="PHP">
+                        <option value="Turbo Pascal">
+                        <option value="Assembleur">
+                        <option value="Coréen">
+                    </datalist>
+                </div>
+                <div class="inp">
+                    <label for="area">Mobilité</label>
+                    <select name="area[]" id="area" size="4" multiple>
+                        <option value="EU">Europe</option>
+                        <option value="AS">Asie</option>
+                        <option value="AM">Amériques</option>
+                        <option value="OC">Océanie</option>
+                        <option value="AF">Afrique</option>
+                        <option value="MC">Mon Canapé</option>
+                    </select>
+                </div>
+                <div class="inp">
+                    <label for="CV">CV</label>
+                    <input type="file" name="CV" id="CV" accept=".pdf,.doc,.docx,.txt,.odt">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="5242880">
+                </div>
+                <div class="inp">
+                    <label for="test">Test Couleur</label>
+                    <input type="color" name="test" id="test" title="Ceci est un test de personalité au travers du choix d'une couleur">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Prétentions Salariales</legend>
+                <div class="inp">
+                    <label for="salary">Salaire</label>
+                    <input type="range" name="salary" id="salary" min="2500" max="8000" step="100" value="3200" onchange
+="document.getElementById('salVal').textContent=this.value">
+                    <output id="salVal"> </output>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Statut Souhaité</legend>
+                <div class="inpcheck">
+                    <input type="checkbox" name="status[]" id="statJR" value="Dev Junior">
+                    <label for="statJR">Développeur Junior</label>
+                </div>
+                <div class="inpcheck">
+                    <input type="checkbox" name="status[]" id="statSR" value="Dev Senior">
+                    <label for="statSR">Développeur Senior</label>
+                </div>
+                <div class="inpcheck">
+                    <input type="checkbox" name="status[]" id="statDr" value="Dir Si">
+                    <label for="statDr">Directeur SI</label>
+                </div>
+            </fieldset> 
+            <fieldset>
+                <div class="inp"><label for="rem">Remarques</label><textarea name="rem" id="rem" cols="30" rows="10"></textarea></div>
+            </fieldset>
+            <input type="submit" value="Sauvegarder" class="inpsub"><input type="reset" value="Effacer" class="inpsub"><input type="image" src="pics/ico.svg" alt="Icon" class="inpmg">    
+        </form>
+    </main>
+</body>
+</html>

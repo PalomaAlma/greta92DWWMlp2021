@@ -1,0 +1,102 @@
+#formulaire {
+	text-align: center;
+}
+
+#formulaire {
+	background-color: rgba(234,214,188,0.3);
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+#formulaire>form {
+	margin: 0rem auto ;
+	padding: 2rem 4rem 2rem 2rem;
+	border-radius: 1.5rem;
+}
+
+#formulaire .inp, #formulaire .lang {
+	margin: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+#formulaire label {
+	font-weight: bolder;
+	text-align: center;
+}
+
+#formulaire input {
+	margin: 0rem 15rem 2rem 15rem;
+	transition: 0.3s all ease;
+	text-align: center;
+	height: 2rem;
+}
+
+#formulaire .inp input:focus, #formulaire .inpsub:hover {
+	transform: scale(1.2);
+	transform-origin: 50% 0%;
+}
+
+#formulaire .inpsub:hover {
+	color: rgba(16,11,12,1);
+	background-color: rgba(234,214,188,1);
+	box-shadow: 2px 2px 2px rgba(16, 11, 12,1);
+	text-decoration: double underline rgb(16, 11, 12,1);
+}
+
+
+#formulaire .inpsub {
+	color: rgba(234, 214, 188,1);
+	font-weight: bold;
+	border-radius: 1.5rem;
+	height: 4rem;
+	width: 8rem;
+	text-decoration: double underline rgb(234, 214, 188,1);
+	background-color: rgba(16, 11, 12,1);
+	transition: 0.3s all ease;
+}
+
+#formulaire .inpradio, #formulaire .inpcheck {
+	display: flex;
+	flex-direction: column-reverse;
+	text-align: center;
+}
+
+#exp, #test {
+	width: 59%;
+}
+
+#formulaire .inpmg {
+	transition: 0.3s all ease;
+	width: 2rem;
+	height: 2rem;
+}
+
+#formulaire .inpmg:hover {
+	transform: scale(2);
+	transform-origin: 50% 100%;
+}
+
+
+/* #formulaire {
+	width: 60%;
+	margin: 0rem auto 0rem auto;
+}
+#formulaire label {
+    display: inline-block;
+	font-weight: bolder;
+	text-align: right;
+	width: 30%;
+}*/
+
+#formulaire .inp input, select, textarea {
+	transition: 0.5s all linear;
+}
+#formulaire .inp input:focus, select:focus, textarea:focus {
+	background-color: rgba(16,11,12,0.8);
+	color: rgba(234, 214, 188,1);
+}
+/*
+#formulaire div {
+    margin: .5rem 0;
+} */
