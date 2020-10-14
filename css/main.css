@@ -364,3 +364,16 @@ video, audio {
 #footer>ul>.colonne:first-child, #footer>ul>.colonne:last-child {
 	border: none;
 } */
+
+@media screen and (max-width:640px) {
+	
+	#equipe img {
+		display: none;
+	}
+
+	#temoin article {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+}
