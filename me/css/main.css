@@ -9,8 +9,10 @@
 body {
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
     color: rgba(17, 51, 133,1);
-    background-image: url(../pics/sg30..png);
-    background-size: cover;
+    /* background-image: url(../pics/chry.jpg);
+    background-size: contain;
+    background-attachment: fixed; */
+    background-color: rgb(4, 15, 41);
 }
 
 #top {
@@ -20,6 +22,7 @@ body {
     border-radius: 1.3rem;
     background-color: rgba(1,1,1,0.2);
     padding: .5rem;
+    z-index: 1;
 }
 
 #top img{
@@ -28,18 +31,20 @@ body {
 
 #all {
     margin: 1rem;
-    background-color: rgba(244, 228, 255,0.85);
-    border-radius: 1.5rem;
+    background-color: rgba(244, 228, 255,0.8);
+    /* border-radius: 1.5rem; */
     text-align: center;
 }
 
 #tete {
     padding-bottom: 2rem;
-    background-image: linear-gradient(rgba(244, 228, 255,1) 80%, rgba(244, 228, 255,0));
-    border-radius: 1.5rem 1.5rem 0 0;
+    background-image: linear-gradient(rgba(244, 228, 255,1) 60%, rgba(244, 228, 255,0));
+    /* border-radius: 1.5rem 1.5rem 0 0; */
 }
 
 #nom {
+    padding: 1rem;
+    text-decoration: double overline;
     font-size: 3rem;
     padding-bottom: 1.5rem;
 }
@@ -57,28 +62,30 @@ body {
     display: inline-block;
     font-style: italic;
     font-size: 1rem;
-    background-image: linear-gradient(rgba(17, 51, 133,0.6),rgba(17, 51, 133,0.3));
-    width: 3.5rem;
+    /* background-image: linear-gradient(rgba(17, 51, 133,0.6),rgba(17, 51, 133,0.3)); */
+    width: 70%;
+    height: 75%;
     padding: .5rem .5rem;
-    border-radius: 1.5rem;
+    border-radius: .5rem;
     /* border: 0.1rem rgba(17, 51, 133,0.8) solid; */
-    color: rgba(244,228,255,0.9);
+    /* color: rgba(244,228,255,0.9); */
+    color: rgba(17, 51, 133,0.6);
     /* color: rgba(227, 184, 24,1); */
-    box-shadow: 0px -2px 1px rgba(17, 51, 133,0.5) inset;
+    box-shadow: 0px 1px 1px rgba(17, 51, 133,0.5) inset;
     transition: all 0.5s linear;
     text-decoration: none;
 }
 
 #menu .bouton:hover, #menu .bouton:active {
-    /* box-shadow: 1px 1px 1px rgba(1,1,1,0.9); */
-    color: rgba(244,228,255,1);
+    /* box-shadow: 1px 1px 1px rgba(1,1,1,0.9);background-image: linear-gradient(rgba(227, 184, 24,0.6), rgba(227, 184, 24,0.3)); */
+    color: rgba(17, 51, 133,1);
+    box-shadow: 0px -1px 1px rgba(17, 51, 133,1) inset;
     transform: scale(1.1);
-    background-color: rgba(17, 51, 133,0.6);
-    /* border: 0.1rem rgba(1,1,1,1) solid; */
+    background-color: rgba(244, 228, 255,1);
 }
 
 #image {
-    width: 15rem;
+    width:90%;
 }
 
 #photo {
@@ -96,7 +103,8 @@ h2, h3 {
 }
 
 #principal h2 {
-    
+    border-top: .5rem double rgba(244, 228, 255,0.5);
+    padding-top: 1rem;
 }
 
 #bio {
@@ -128,22 +136,108 @@ h2, h3 {
     width: 15rem;
     margin: 1rem;
     border-radius: 1.5rem;
-    box-shadow: 5px 5px 5px rgba(244, 228, 255,1);
+    box-shadow: 0px 5px 5px rgba(244, 228, 255,1);
     padding: 1.5rem;
 }
 
-/* #projet article a {
-    
-} */
+#projet img {
+    width: 100%;
+}
+
+#projet article a {
+    position: relative;
+    bottom: -1%;
+    right: -40%;
+    font-weight: bold;
+    text-decoration: double underline;
+    color: rgb(4, 15, 41);
+    /* background-color: rgba(244, 228, 255,1);
+    border-radius: 50%;
+    padding: .5rem; */
+}
 
 #contlien {
     display: flex;
+    padding-top: 2rem;
+    background-image: linear-gradient(rgba(244, 228, 255,0), rgba(244, 228, 255,1)30%);
 }
+
 #contlien div {
     width: 50%;
 }
 
-#contlien li {
-    list-style: none;
+#contlien ul {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
+#contlien li {
+    list-style: none;
+    padding: .5rem;
+}
+
+#contlien a {
+    text-decoration: double underline;
+    font-weight: bolder;
+    color: rgb(4, 15, 41);
+    /* text-shadow: -1px 0px 0px rgba(17, 51, 133,1); */
+}
+
+#contlien iframe {
+    /* width: 0%;
+    position: relative;
+    bottom: 30%;
+    z-index: 0; */
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    #all {
+        margin: 2% 10%;
+    }
+
+    /* #tete {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+    } */
+
+    #menu .bouton {
+        width: 4.5rem;
+        padding: .5rem;
+    }
+    
+    #nom {
+        padding: 2rem 0 2rem 0;
+    }
+
+    #image {
+        padding: auto;
+        width: 50%;
+    }
+
+    #principal {
+        display: flex;
+        padding: 0 1rem 0 1rem;
+    }
+
+    #infos {
+        width: 20%;
+        /* border-right: .5rem double rgba(244, 228, 255,1); */
+    }
+
+    #contlien iframe {
+        display: block;
+        width: 85%;
+        padding: 0 10%;
+    }
+
+    #projet a {
+        text-decoration: overline double rgb(4, 15, 41);
+    }
+}
